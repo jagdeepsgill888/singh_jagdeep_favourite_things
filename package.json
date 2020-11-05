@@ -1,0 +1,20 @@
+{
+  "name": "singh_jagdeep_favourite_things",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagdeepsgill888/singh_jagdeep_favourite_things.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jagdeepsgill888/singh_jagdeep_favourite_things/issues"
+  },
+  "homepage": "https://github.com/jagdeepsgill888/singh_jagdeep_favourite_things#readme"
+}
