@@ -34,10 +34,10 @@ function handleDataSet(data) {
         let currentUser = userTemplate.cloneNode(true),
         currentUserText = currentUser.querySelector('.user').children;
 
-        currentUserText[1].src = `images/${data[user].avatar}`;
-        currentUserText[2].textContent = data[user].name;
-        currentUserText[3].textContent = data[user].role;
-        currentUserText[4].textContent = data[user].nickname;
+        currentUserText[1].src = `images/${data[user].poster}`;
+        currentUserText[2].textContent = data[user].title;
+        currentUserText[3].textContent = data[user].genre;
+        currentUserText[4].textContent = data[user].description;
              
              //add this new user to the view
              userSection.appendChild(currentUser);
@@ -68,11 +68,11 @@ function retrieveProjectInfo(event) {
         let currentUser = userTemplate.cloneNode(true),
         currentUserText = currentUser.querySelector('.user').children;
 
-        currentUserText[1].src = `images/${thumbs[user].avatar}`;
+        currentUserText[1].src = `images/${thumbs[user].poster}`;
         currentUserText[1].id = thumbs[user].id;
-        // currentUserText[2].textContent = data[user].name;
-        // currentUserText[3].textContent = data[user].role;
-        // currentUserText[4].textContent = data[user].nickname;
+        // currentUserText[2].textContent = data[user].title;
+        // currentUserText[3].textContent = data[user].genre;
+        // currentUserText[4].textContent = data[user].description;
              
             // add this new user to the view
              userSection.appendChild(currentUser);
@@ -83,7 +83,7 @@ function retrieveProjectInfo(event) {
  fetchData('./includes/index.php').then(data => renderPortfolioThumbnails(data)).catch(err => console.log(err));
 
 
- //fetchData("./includes/index.php").then(data => handleDataSet(data)).catch(err => { console.log(err); popErrorBox(err); });
+//  fetchData("./includes/index.php").then(data => handleDataSet(data)).catch(err => { console.log(err); popErrorBox(err); });
 // fetchData('./AnotherDataSet.json').then(data => handleDataSet(data)).catch(err => console.log(err));
  //handleDataSet(Team);
 
