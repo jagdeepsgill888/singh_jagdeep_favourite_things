@@ -1,0 +1,20 @@
+// main rules go here
+
+// another generic comment
+
+body {
+    font: $main-font;
+    font-size: $font-size;
+    
+    background-color: $main-bg-color;
+
+    margin: 0;
+    border: 0;
+
+    .box {
+        width: 30px;
+        height:30px;
+        
+        @include roundCorners(20px);
+    }
+}
