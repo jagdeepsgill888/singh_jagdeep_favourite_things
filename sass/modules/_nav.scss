@@ -1,21 +1,79 @@
-nav {
-    margin: 0;
-
-    .nav-item {
-        display: inline-block; margin: 0 10px;
-        background-color: blue;
-
-        @include roundCorners(8px);
-        @include addPadding(5px 12px);
-
-        a{ cursor: pointer; text-decoration: none; color: white; }
-    }
-
-    :hover {
-        a { color: pink;}
-    }
+#mainNav {
+  margin-top: 2px;
+  margin-right: 20px;
+  width: 100px;
+  height: 92px;
+  display: none;
 }
 
-// .main-nav {
-//     //whatever style i want
-// }
+#mainNav.slideToggle {
+  display: block;
+}
+
+#mainNav ul {
+  // text-transform: uppercase;
+  margin-top: 27px;
+  flex-direction: row;
+  text-align: center;
+
+  .slideToggle {
+    display: block;
+  }
+
+  li a {
+    display: block;
+    font-size: 25px;
+    padding: 17px;
+    color: #e1e1e1;
+    text-decoration: none;
+
+    :hover {
+      color: $sunset-yellow;
+    }
+  }
+}
+
+#mainNav a:hover {
+  color: $sunset-yellow;
+}
+
+#menuToggle {
+  margin-left: auto;
+  margin-right: 20px;
+  color: $white;
+  float: right;
+  line-height: 120px;
+  font-size: 24px;
+  display: block;
+}
+
+#menuToggle button {
+  background: url(../assets/burger_menu.svg) center no-repeat;
+  border: 0px;
+  height: 50px;
+  width: 50px;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+
+#menuToggle.expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+
+  transform: rotate(90deg);
+}
+
+.contactBtn {
+  display: flex;
+  text-decoration: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  svg {
+    width: 80px;
+    :hover {
+      fill: $sunset-yellow;
+    }
+  }
+}
