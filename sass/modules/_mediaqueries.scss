@@ -1,8 +1,15 @@
 @media screen and (min-width: 480) {
-    //Whatever styles you need here
-    body { background-color: purple;}
-    
+  //Whatever styles you need here
+  body {
+    background-color: purple;
+  }
 }
 
+@media screen and (min-width: 58em) {
+  img {
+    width: 300px;
+    height: 410px;
+  }
+}
 // This is a SASS commet
 /* CSS comments work too */

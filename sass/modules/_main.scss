@@ -3,18 +3,23 @@
 // another generic comment
 
 body {
-    font: $main-font;
-    font-size: $font-size;
-    
-    background-color: $main-bg-color;
+  font: $main-font;
+  font-size: $font-size;
 
-    margin: 0;
-    border: 0;
+  background-color: $main-bg-color;
 
-    .box {
-        width: 30px;
-        height:30px;
-        
-        @include roundCorners(20px);
-    }
+  margin: 0;
+  border: 0;
+
+  .box {
+    width: 30px;
+    height: 30px;
+
+    @include roundCorners(20px);
+  }
+}
+//desktop size
+img {
+  width: 300px;
+  height: 410px;
 }
