@@ -1,8 +1,8 @@
 .lightbox {
   position: absolute;
-  top: 0;
+  top: 600px;
   min-width: 375px;
-  height: 100%;
+  height: 63%;
 
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
@@ -24,4 +24,10 @@
 
 .show-lightbox {
   display: block;
+}
+
+@media screen and (min-width: 58em) {
+  .lightbox {
+    width: 1080px;
+  }
 }
