@@ -2,7 +2,7 @@
   position: absolute;
   top: 600px;
   min-width: 375px;
-  height: 63%;
+  height: 75%;
 
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
@@ -31,7 +31,13 @@
 }
 
 .show-lightbox {
-  display: block;
+  display: grid;
+  grid-template-columns: 0.1fr auto 0.1fr;
+  grid-template-rows: auto 0.5fr 1fr;
+
+  h2 {
+    color: $sunset-yellow;
+  }
 }
 
 @media screen and (min-width: 58em) {
