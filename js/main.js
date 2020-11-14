@@ -134,6 +134,7 @@ function retrieveProjectInfo(event) {
 
  function hideLightbox() {
   lightBox.classList.remove('show-lightbox');
+  user.classList.remove('user');
 }
 
 
