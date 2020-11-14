@@ -34,7 +34,7 @@ function handleDataSet(data) {
         let currentUser = userTemplate.cloneNode(true),
         currentUserText = currentUser.querySelector('.user').children;
 
-        currentUserText[1].src = `images/${data[user].poster}`;
+        // currentUserText[1].src = `images/${data[user].poster}`;
         currentUserText[2].textContent = data[user].title;
         currentUserText[3].textContent = data[user].genre;
         currentUserText[4].textContent = data[user].description;
@@ -53,7 +53,8 @@ function retrieveProjectInfo(event) {
   //because it'll break ( the PHP will choke)
   if (!event.target.id) { return }
 
-  fetchData(`./includes/index.php?id=${event.target.id}`).then(data => console.log(data)).catch(err => console.log(err));
+  // fetchData(`./includes/index.php?id=${event.target.id}`).then(data => console.log(data)).catch(err => console.log(err));
+  fetchData(`./includes/index.php?id=${event.target.id}`).then(data => handleDataSet(data)).catch(err => console.log(err));
 }
 
  function renderPortfolioThumbnails(thumbs) {
