@@ -73,7 +73,18 @@ body {
   }
 }
 
-.user img {
-  width: 150px;
-  height: 205px;
+// .user img {
+//   width: 200px;
+//   height: 205px;
+// }
+
+.poster {
+  width: 250px;
+  height: 375px;
+  display: inline-block;
+}
+
+.lightboxPoster {
+  width: 180px;
+  height: 270px;
 }
