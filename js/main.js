@@ -9,10 +9,9 @@ import { fetchData } from "./modules/DataMiner.js";
 console.log('Loaded');
 
  let menuToggle = document.querySelector("#menuToggle"),
- burgerCon = document.querySelector("#mainNav");
-//  lightBox = document.querySelector(".lightbox"),
-//     lbClose = lightBox.querySelector("span"); (lightbox)
-
+ burgerCon = document.querySelector("#mainNav"),
+ lightBox = document.querySelector(".lightbox"),
+    lbClose = lightBox.querySelector("span");
 // console.log(Team);
 
 // debugger;
@@ -50,7 +49,7 @@ function handleDataSet(data) {
    
 
       console.log(data);
-      // fetchData('./includes/index.php').then(data => showLightbox ()).catch(err => console.log(err)); (lightbox)
+      fetchData('./includes/index.php').then(data => showLightbox ()).catch(err => console.log(err));
  }
 
 function retrieveProjectInfo(event) {
@@ -69,7 +68,7 @@ function retrieveProjectInfo(event) {
    
   let userSection =document.querySelector(".user-section"),
     userTemplate = document.querySelector("#profs-template").content;
-    
+
       // debugger;
       for (let user in thumbs) {
 
@@ -98,24 +97,15 @@ function retrieveProjectInfo(event) {
  //handleDataSet(Team);
 
 
-// ( function showLightbox (){
-//   // added a timing event to allow the banner to animate beofre lightbox
-//   setTimeout(function(){lightBox.classList.add('show-lightbox');}, 800); ) lightbox
-
- // try making the video play as well
- // load the right video,then play interval
+ function showLightbox (){
+  // added a timing event to allow the banner to animate beofre lightbox
+  setTimeout(function(){lightBox.classList.add('show-lightbox');}, 800);
+ }
 
 
- //  let house = this.classList[1],// stark, baratheon etc
-//    targetSource = house.charAt(0).toUpperCase() + house.slice(1); // Stark
-
-// lbVideo.src = `video/House-${targetSource}.mp4`;
-//  }
-
-
-//  function hideLightbox() {
-//   lightBox.classList.remove('show-lightbox');  
-// }  (lightbox)
+ function hideLightbox() {
+  lightBox.classList.remove('show-lightbox');
+}
 
 
 		
@@ -126,6 +116,6 @@ function retrieveProjectInfo(event) {
 
 
     menuToggle.addEventListener("click", hamburgerMenu);
-    // lbClose.addEventListener("click", hideLightbox); (lightbox)
+    lbClose.addEventListener("click", hideLightbox);
 
 })();
