@@ -1,7 +1,14 @@
-@media screen and (min-width: 480) {
-  //Whatever styles you need here
-  body {
-    background-color: purple;
+// @media screen and (min-width: 480) {
+//   //Whatever styles you need here
+//   body {
+//     background-color: purple;
+//   }
+// }
+
+@media screen and (min-width: 503px) {
+  #heroLand {
+    min-width: 550px;
+    min-height: 740px;
   }
 }
 
@@ -76,7 +83,15 @@
     }
   }
 
-  img {
+  #heroLand {
+    background: black;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    min-width: 1080px;
+    min-height: 500px;
+  }
+
+  .user img {
     width: 300px;
     height: 410px;
   }

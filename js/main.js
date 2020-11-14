@@ -87,4 +87,16 @@ function retrieveProjectInfo(event) {
 // fetchData('./AnotherDataSet.json').then(data => handleDataSet(data)).catch(err => console.log(err));
  //handleDataSet(Team);
 
+
+ let menuToggle = document.querySelector("#menuToggle"),
+		burgerCon = document.querySelector("#mainNav");
+		
+		function hamburgerMenu() {
+			burgerCon.classList.toggle("slideToggle");
+			menuToggle.classList.toggle("expanded");
+		}
+
+
+		menuToggle.addEventListener("click", hamburgerMenu);
+
 })();

@@ -57,3 +57,23 @@ body {
     width: 125px;
   }
 }
+
+#heroLand {
+  background: black;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  min-width: 375px;
+  min-height: 500px;
+
+  h2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: $hero-Cont-h2-size;
+    color: $sunset-yellow;
+  }
+}
+
+.user img {
+  width: 150px;
+  height: 205px;
+}
