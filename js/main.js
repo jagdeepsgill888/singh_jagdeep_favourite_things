@@ -8,6 +8,11 @@ import { fetchData } from "./modules/DataMiner.js";
 
 console.log('Loaded');
 
+ let menuToggle = document.querySelector("#menuToggle"),
+ burgerCon = document.querySelector("#mainNav");
+//  lightBox = document.querySelector(".lightbox"),
+//     lbClose = lightBox.querySelector("span"); (lightbox)
+
 // console.log(Team);
 
 // debugger;
@@ -34,7 +39,7 @@ function handleDataSet(data) {
         let currentUser = userTemplate.cloneNode(true),
         currentUserText = currentUser.querySelector('.user').children;
 
-        // currentUserText[1].src = `images/${data[user].poster}`;
+        currentUserText[1].src = `images/${data[user].poster}`;
         currentUserText[2].textContent = data[user].title;
         currentUserText[3].textContent = data[user].genre;
         currentUserText[4].textContent = data[user].description;
@@ -45,6 +50,7 @@ function handleDataSet(data) {
    
 
       console.log(data);
+      // fetchData('./includes/index.php').then(data => showLightbox ()).catch(err => console.log(err)); (lightbox)
  }
 
 function retrieveProjectInfo(event) {
@@ -53,15 +59,17 @@ function retrieveProjectInfo(event) {
   //because it'll break ( the PHP will choke)
   if (!event.target.id) { return }
 
+  
   // fetchData(`./includes/index.php?id=${event.target.id}`).then(data => console.log(data)).catch(err => console.log(err));
   fetchData(`./includes/index.php?id=${event.target.id}`).then(data => handleDataSet(data)).catch(err => console.log(err));
+  
 }
 
  function renderPortfolioThumbnails(thumbs) {
    
   let userSection =document.querySelector(".user-section"),
     userTemplate = document.querySelector("#profs-template").content;
-
+    
       // debugger;
       for (let user in thumbs) {
 
@@ -71,7 +79,7 @@ function retrieveProjectInfo(event) {
 
         currentUserText[1].src = `images/${thumbs[user].poster}`;
         currentUserText[1].id = thumbs[user].id;
-        // currentUserText[2].textContent = data[user].title;
+        // currentUserText[0].textContent = data[user].title;
         // currentUserText[3].textContent = data[user].genre;
         // currentUserText[4].textContent = data[user].description;
              
@@ -82,6 +90,7 @@ function retrieveProjectInfo(event) {
 }
 
  fetchData('./includes/index.php').then(data => renderPortfolioThumbnails(data)).catch(err => console.log(err));
+ 
 
 
 //  fetchData("./includes/index.php").then(data => handleDataSet(data)).catch(err => { console.log(err); popErrorBox(err); });
@@ -89,8 +98,26 @@ function retrieveProjectInfo(event) {
  //handleDataSet(Team);
 
 
- let menuToggle = document.querySelector("#menuToggle"),
-		burgerCon = document.querySelector("#mainNav");
+// ( function showLightbox (){
+//   // added a timing event to allow the banner to animate beofre lightbox
+//   setTimeout(function(){lightBox.classList.add('show-lightbox');}, 800); ) lightbox
+
+ // try making the video play as well
+ // load the right video,then play interval
+
+
+ //  let house = this.classList[1],// stark, baratheon etc
+//    targetSource = house.charAt(0).toUpperCase() + house.slice(1); // Stark
+
+// lbVideo.src = `video/House-${targetSource}.mp4`;
+//  }
+
+
+//  function hideLightbox() {
+//   lightBox.classList.remove('show-lightbox');  
+// }  (lightbox)
+
+
 		
 		function hamburgerMenu() {
 			burgerCon.classList.toggle("slideToggle");
@@ -98,6 +125,7 @@ function retrieveProjectInfo(event) {
 		}
 
 
-		menuToggle.addEventListener("click", hamburgerMenu);
+    menuToggle.addEventListener("click", hamburgerMenu);
+    // lbClose.addEventListener("click", hideLightbox); (lightbox)
 
 })();
