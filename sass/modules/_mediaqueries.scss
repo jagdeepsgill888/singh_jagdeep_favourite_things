@@ -5,10 +5,37 @@
 //   }
 // }
 
+@media screen and (min-width: 378px) {
+  .poster {
+    // padding: 15% auto;
+    width: 300px;
+    height: 450px;
+  }
+}
+
 @media screen and (min-width: 503px) {
   #heroLand {
     min-width: 550px;
     min-height: 740px;
+  }
+
+  .user-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .poster {
+    // padding: 15% auto;
+    width: 400px;
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .user-section {
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
 }
 
@@ -91,7 +118,7 @@
     min-height: 500px;
   }
 
-  .user img {
+  .poster {
     width: 300px;
     height: 410px;
   }
