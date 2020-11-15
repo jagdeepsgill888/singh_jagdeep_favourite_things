@@ -8,6 +8,14 @@
 @media screen and (min-width: 378px) {
   .poster {
     // padding: 15% auto;
+    width: 270px;
+    height: 390px;
+  }
+}
+
+@media screen and (min-width: 458px) {
+  .poster {
+    // padding: 15% auto;
     width: 300px;
     height: 450px;
   }
@@ -15,27 +23,51 @@
 
 @media screen and (min-width: 503px) {
   #heroLand {
-    min-width: 550px;
-    min-height: 740px;
+    min-width: 400px;
+    min-height: 530px;
   }
 
-  .user-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+  // .user-section {
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: nowrap;
+  // }
 
   .poster {
     // padding: 15% auto;
-    width: 400px;
-    height: 550px;
+    width: 350px;
+    height: 480px;
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (min-width: 590px) {
+  .poster {
+    // padding: 15% auto;
+    width: 390px;
+    height: 520px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .poster {
+    padding-left: 26%;
+    width: 350px;
+    height: 470px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .poster {
+    width: 315px;
+    height: 446px;
+  }
+}
+
+@media screen and (min-width: 850px) {
   .user-section {
-    flex-wrap: nowrap;
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 
@@ -119,9 +151,25 @@
   }
 
   .poster {
+    padding-left: 22%;
+    width: 260px;
+    height: 380px;
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .poster {
+    width: 280px;
+    height: 395px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .poster {
     width: 300px;
     height: 410px;
   }
 }
+
 // This is a SASS commet
 /* CSS comments work too */
