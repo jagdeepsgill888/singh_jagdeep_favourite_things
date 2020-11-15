@@ -50,6 +50,7 @@
   display: grid;
   grid-template-columns: auto 1fr auto auto;
   grid-template-rows: 0.5fr auto auto auto;
+  padding-left: 20%;
 
   .lightboxPoster {
     grid-column: 3/5;
@@ -60,22 +61,72 @@
 
   .user-title {
     color: $sunset-yellow;
-    font-size: 13px;
+    font-size: 14px;
     grid-column: 3/4;
     grid-row: 3/4;
     padding-left: 80px;
   }
 
   .user-genre {
-    font-size: 11px;
+    font-size: 14px;
+    color: red;
     grid-column: 4/5;
     grid-row: 3/4;
   }
   .user-description {
-    font-size: 8px;
+    font-size: 10px;
     grid-column: 3/5;
     grid-row: 4/5;
     padding-left: 40px;
+  }
+}
+
+@media screen and (min-width: 458px) {
+  .userLighboxGrid {
+    .lightboxPoster {
+      // grid-column: 3/5;
+      // grid-row: 2/3;
+      width: 230px;
+      height: 350px;
+      padding-left: 80px;
+    }
+    .user-title {
+      color: $sunset-yellow;
+      font-size: 16px;
+    }
+
+    .user-genre {
+      font-size: 14px;
+    }
+    .user-description {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (min-width: 741px) {
+  .lightbox {
+    height: 83%;
+  }
+  .userLighboxGrid {
+    .lightboxPoster {
+      // grid-column: 3/5;
+      // grid-row: 2/3;
+      width: 300px;
+      height: 430px;
+      padding-left: 80px;
+    }
+    .user-title {
+      color: $sunset-yellow;
+      font-size: 17px;
+    }
+
+    .user-genre {
+      font-size: 17px;
+    }
+    .user-description {
+      font-size: 15px;
+    }
   }
 }
 
@@ -83,5 +134,40 @@
   .lightbox {
     width: 1080px;
     top: 600px;
+  }
+
+  .userLighboxGrid {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-rows: 0.5fr auto auto auto;
+    padding-left: 10%;
+
+    .lightboxPoster {
+      grid-column: 3/5;
+      grid-row: 2/3;
+
+      padding-left: 80px;
+    }
+
+    .user-title {
+      color: $sunset-yellow;
+      font-size: 14px;
+      grid-column: 3/4;
+      grid-row: 3/4;
+      padding-left: 80px;
+    }
+
+    .user-genre {
+      font-size: 14px;
+      color: red;
+      grid-column: 4/5;
+      grid-row: 3/4;
+    }
+    .user-description {
+      font-size: 10px;
+      grid-column: 3/5;
+      grid-row: 4/5;
+      padding-left: 40px;
+    }
   }
 }
