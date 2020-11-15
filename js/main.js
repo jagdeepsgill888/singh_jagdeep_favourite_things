@@ -132,10 +132,72 @@ function retrieveProjectInfo(event) {
  
 
 
+      
+  
+          
  function hideLightbox() {
+  //  var template = document.getElementById("profs-template2");
+  //  template.parentNode.removeChild(template);
+
+  // var template = document.getElementById("profs-template2").children;
+  
+
+
+
+  // lightBox.classList.remove('user');
+  //  currentUserText = currentUser.querySelector('.user').children;
+
+  //     currentUserText[1].src = "";
+  //     currentUserText[2].textContent = "";
+  //     currentUserText[3].textContent = "";
+  //     currentUserText[4].textContent = "";
+
+  // userTemplateTwo = document.querySelector("#profs-template2").content;
+//   template[1].textContent.src = "";
+//   template[2].textContent = "";
+//   template[3].textContent = "";
+//   template[4].textContent = "";
+
+//   template.parentNode.removeChild(template);
+//   lightBox.classList.remove('show-lightbox');
+
+// }
+
+
+
+//  removed the thumnail image as well but didn’t remove from lightbox
+// function hideLightbox() {
+//  let template = document.querySelector('.user').children;
+//   template[1].src = "";
+//   template[2].textContent = "";
+//   template[3].textContent = "";
+//   template[4].textContent = "";
+//   lightBox.classList.remove('show-lightbox');
+// }
+
+
+
+
+// // Doesn’t work, error 
+// Uncaught TypeError: Cannot create property 'src' on string ''
+//     at HTMLSpanElement.hideLightbox (main.js:150)
+
+//  function hideLightbox() {
+// let template = document.querySelector('.user').children;
+//   template[1].textContent.src = "";
+//   template[2].textContent = "";
+//   template[3].textContent = "";
+//   template[4].textContent = "";
+//   lightBox.classList.remove('show-lightbox');
+// }
+
+
+
   lightBox.classList.remove('show-lightbox');
-  user.classList.remove('user');
 }
+
+  
+        
 
 
 		
