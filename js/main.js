@@ -107,7 +107,7 @@ function retrieveProjectInfo(event) {
   //make a copy of our template here and then
   // populate the children (text element) with
   //the static data from the team object
-    debugger;
+    // debugger;
     for (let user in data) {
 
       

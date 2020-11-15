@@ -1,6 +1,6 @@
 .lightbox {
   position: absolute;
-  top: 600px;
+  top: 800px;
   min-width: 375px;
   height: 75%;
 
@@ -32,16 +32,56 @@
 
 .show-lightbox {
   display: grid;
-  grid-template-columns: 0.1fr auto 0.1fr;
-  grid-template-rows: auto 0.5fr 1fr;
+  grid-template-columns: 1fr 0.2fr;
+  grid-template-rows: 1fr auto;
 
-  h2 {
+  template {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  span {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
+.userLighboxGrid {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-rows: 0.5fr auto auto auto;
+
+  .lightboxPoster {
+    grid-column: 3/5;
+    grid-row: 2/3;
+
+    padding-left: 80px;
+  }
+
+  .user-title {
     color: $sunset-yellow;
+    font-size: 13px;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    padding-left: 80px;
+  }
+
+  .user-genre {
+    font-size: 11px;
+    grid-column: 4/5;
+    grid-row: 3/4;
+  }
+  .user-description {
+    font-size: 8px;
+    grid-column: 3/5;
+    grid-row: 4/5;
+    padding-left: 40px;
   }
 }
 
 @media screen and (min-width: 58em) {
   .lightbox {
     width: 1080px;
+    top: 600px;
   }
 }
