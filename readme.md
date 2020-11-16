@@ -9,7 +9,8 @@ shows as users clicks on the thumbnails.
 ## How to Use?
 
 Please feel free to click on any of the thumbnails, it shall show up
-information about the show when is clicked on. The Database is in the
+information about the show when is clicked on. Due to a bug, please refresh the page after
+closing a lightbox ,so you could see the desired option's data on the next click.
 
 ## Install
 

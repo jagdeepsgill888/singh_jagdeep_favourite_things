@@ -25,11 +25,8 @@ function handleDataSet(data) {
     //   currentUserText = currentUser.querySelector('.user').children;
     
     let userSection =document.querySelector(".user-section"),
-    userTemplate = document.querySelector("#profs-template").content;
+    userTemplate = document.querySelector("#tv-template").content;
 
-    //make a copy of our template here and then
-    // populate the children (text element) with
-    //the static data from the team object
       debugger;
       for (let user in data) {
 
@@ -67,7 +64,7 @@ function retrieveProjectInfo(event) {
  function renderPortfolioThumbnails(thumbs) {
    
   let userSection =document.querySelector(".user-section"),
-    userTemplate = document.querySelector("#profs-template").content;
+    userTemplate = document.querySelector("#tv-template").content;
 
       // debugger;
       for (let user in thumbs) {
@@ -102,7 +99,7 @@ function retrieveProjectInfo(event) {
   setTimeout(function(){lightBox.classList.add('show-lightbox');}, 800);
    
   let userSectionTwo =document.querySelector(".lightbox"),
-  userTemplateTwo = document.querySelector("#profs-template2").content;
+  userTemplateTwo = document.querySelector("#tv-template2").content;
 
   //make a copy of our template here and then
   // populate the children (text element) with
