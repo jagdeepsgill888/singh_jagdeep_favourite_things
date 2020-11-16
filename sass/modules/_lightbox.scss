@@ -1,0 +1,184 @@
+.lightbox {
+  position: absolute;
+  top: 800px;
+  min-width: 375px;
+  height: 75%;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+
+  h2 {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
+}
+
+.close-lb {
+  float: right;
+  padding: 0 30px 0 0;
+  cursor: pointer;
+  font-size: 3em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  opacity: 0.6;
+}
+
+.close-lb:hover {
+  opacity: 1;
+}
+
+.show-lightbox {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  grid-template-rows: 1fr auto;
+
+  template {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  span {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
+.userLighboxGrid {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-rows: 0.5fr auto auto auto;
+  padding-left: 20%;
+
+  .lightboxPoster {
+    grid-column: 3/5;
+    grid-row: 2/3;
+
+    padding-left: 80px;
+  }
+
+  .user-title {
+    color: $sunset-yellow;
+    font-size: 14px;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    padding-left: 80px;
+  }
+
+  .user-genre {
+    font-size: 14px;
+    color: red;
+    grid-column: 4/5;
+    grid-row: 3/4;
+  }
+  .user-description {
+    font-size: 10px;
+    grid-column: 3/5;
+    grid-row: 4/5;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (min-width: 458px) {
+  .userLighboxGrid {
+    .lightboxPoster {
+      // grid-column: 3/5;
+      // grid-row: 2/3;
+      width: 230px;
+      height: 350px;
+      padding-left: 80px;
+    }
+    .user-title {
+      color: $sunset-yellow;
+      font-size: 16px;
+    }
+
+    .user-genre {
+      font-size: 14px;
+    }
+    .user-description {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (min-width: 741px) {
+  .lightbox {
+    height: 83%;
+  }
+  .userLighboxGrid {
+    .lightboxPoster {
+      // grid-column: 3/5;
+      // grid-row: 2/3;
+      width: 300px;
+      height: 430px;
+      padding-left: 80px;
+    }
+    .user-title {
+      color: $sunset-yellow;
+      font-size: 17px;
+    }
+
+    .user-genre {
+      font-size: 17px;
+    }
+    .user-description {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 58em) {
+  .lightbox {
+    width: 1080px;
+    top: 600px;
+  }
+
+  .userLighboxGrid {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr auto;
+    grid-template-rows: 0.5fr 1fr 1fr auto auto;
+    padding-left: 140px;
+
+    .lightboxPoster {
+      grid-column: 1/2;
+      grid-row: 2/5;
+
+      width: 320px;
+      height: 450px;
+
+      padding-left: 0px;
+    }
+
+    .user-title {
+      color: $sunset-yellow;
+      font-size: 25px;
+      grid-column: 3/4;
+      grid-row: 3/4;
+      padding-left: 50px;
+    }
+
+    .user-genre {
+      font-size: 25px;
+      color: red;
+      grid-column: 4/5;
+      grid-row: 3/4;
+    }
+    .user-description {
+      font-size: 20px;
+      grid-column: 3/5;
+      grid-row: 4/5;
+      padding-left: 50px;
+      padding-bottom: 100px;
+    }
+  }
+
+  .show-lightbox {
+    span {
+      padding-right: 0;
+      padding-left: 70px;
+    }
+  }
+}

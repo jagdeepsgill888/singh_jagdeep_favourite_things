@@ -3,18 +3,93 @@
 // another generic comment
 
 body {
-    font: $main-font;
-    font-size: $font-size;
-    
-    background-color: $main-bg-color;
+  font: $main-font;
+  font-size: $font-size;
 
-    margin: 0;
-    border: 0;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  a {
+    font-family: $main-font;
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    font-weight: 400;
+    color: $p-color;
+  }
+  .hidden {
+    display: none;
+  }
 
-    .box {
-        width: 30px;
-        height:30px;
-        
-        @include roundCorners(20px);
-    }
+  h2 {
+    font-weight: 500;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#siteContainer {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+/*mobile first*/
+
+#mainHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background: $header-bg-color;
+}
+
+#logo {
+  margin-top: 50px;
+  margin-left: 20px;
+  height: 65px;
+
+  img {
+    width: 125px;
+  }
+}
+
+#heroLand {
+  background: black;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  min-width: 375px;
+  min-height: 500px;
+
+  h2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: $hero-Cont-h2-size;
+    color: $sunset-yellow;
+  }
+}
+
+// .user img {
+//   width: 200px;
+//   height: 205px;
+// }
+
+// .user-section {
+//   display: flex;
+// }
+
+.poster {
+  padding-left: 24%;
+  padding-right: 8%;
+  width: 57%; //ori 250px   try 60%
+  height: 80%; // ori 375 try 80%
+}
+
+.lightboxPoster {
+  width: 180px;
+  height: 270px;
 }

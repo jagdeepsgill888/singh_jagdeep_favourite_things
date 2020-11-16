@@ -1,9 +1,15 @@
 @mixin roundCorners($radius) {
-    border-radius: $radius;
+  border-radius: $radius;
 }
 
 @mixin addPadding($values...) {
-     @each $var in $values {
-         padding: #{$var};
-     }
+  @each $var in $values {
+    padding: #{$var};
+  }
+}
+
+@mixin addMargin($values...) {
+  @each $var in $values {
+    margin: #{$var};
+  }
 }

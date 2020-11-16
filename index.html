@@ -4,45 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3 Tv Showss</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
 </head>
 <body>
+ <div id="siteContainer">
     <main id="app">
         <h1 class="hidden">My Favourite TV Shows</h1>
-        <nav>
-            <li class="nav-item"><a herf="#">item 1</a></li>
-            
-            <li class="nav-item"><a herf="#">item 2</a></li>
-            <li class="nav-item"><a herf="#">item 3</a></li>
-            <li class="nav-item"><a herf="#">item 4</a></li>
-            <li class="nav-item"><a herf="#">item 5</a></li>
-        </nav>
+        
+
+            <header id="mainHeader">
+             <div id="logo"><img src="images/final5_logo.svg" alt="My Personal Logo"></div>
+         
+             <div id="menuToggle"><button></button></div>
+             <nav id="mainNav"><h2 class="hidden">Main Navigation</h2>
+               <ul>
+                 <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="project.html">Project</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+               </ul></nav>
+            </header>
+        
         <!-- end component-->
+
+       <div id="heroLand"> 
+        <h2>My Fav Tv Shows</h2>
+        <!-- <img src="images/fds.gif" alt=""> -->
+       </div>
+
 
         <!-- add a user section here-->
         <section class="user-section">
             <!-- <h1 class="hidden">Our Users</h1>
-            <h2 class="user-name"></h2>
-            <p class="user-role"></p>
-            <p class="user-nickname"></p> -->
+            <h2 class="user-title"></h2>
+            <p class="user-genre"></p>
+            <p class="user-description"></p> -->
         </section>
         <!-- end user section-->
     </main>
-    
-    <footer>this is a boring footer</footer>
 
     <!-- template goe here  (these dont get rendered on the page) -->
-    <template id="profs-template">
+    <template id="tv-template">
         <div class="user">
             <h1 class="hidden"></h1>
-            <img src="" alt="prof img">
-            <!-- <h2 class="user-name"></h2>
-            <p class="user-nickname"></p>
-            <p class="user-role"></p> -->
+            <img class="poster" src="" alt="tv img">
+            <h2 class="user-title"></h2>
+            <p class="user-genre"></p>
+            <p class="user-description"></p>
         </div>
     </template> 
     <!-- end template -->
 
+    <section class="lightbox">
+        <span class="close-lb">x</span>
+        <template id="tv-template2">
+            <div class="user userLighboxGrid">
+                <h1 class="hidden"></h1>
+                <img class="lightboxPoster" src="" alt="tv img">
+                <h2 class="user-title"></h2>
+                <p class="user-genre"></p>
+                <p class="user-description"></p>
+            </div>
+        </template>
+  
+          </section>
+
+
+
+    <footer id=footer-grid>
+        <h3 class="copyright">JAGDEEP SINGH @2020</h3>
+        <ul class="social-meadia">
+          <li class="fb"><a href="https://www.facebook.com"><img src="images/fb.svg" alt="facebook icon"></a></li>
+          <li class="linkd"><a href="https://www.linkedin.com/learning/"><img src="images/linkd.svg" alt="linkedin icon"></a></li>
+          <li class="insta"><a href="https://www.instagram.com/"><img src="images/insta.svg" alt="instgram icon"></a></li>
+        </ul>
+      </footer>
+</div>
     <!-- script files always go here-->
     <script type="module" src="js/main.js"></script>
 </body>
