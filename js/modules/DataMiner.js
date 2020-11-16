@@ -2,7 +2,7 @@ async function fetchData(datasource) {
     let resource = await fetch(datasource).then(response => {
         // bang operator - means "does not equal" (or a falsy value)
         if (response.status !== 200) {
-            throw new Error(`Danger Will Robinson! Here there be monster! Error ${response.status}`);
+            throw new Error(` Error  ${response.status}`);
         }
         return response;
 
